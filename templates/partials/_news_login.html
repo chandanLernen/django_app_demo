@@ -1,0 +1,94 @@
+{% load static %}
+<link
+  href="{% static '/css/about_us_style.css'  %}"
+  rel="stylesheet"
+  type="text/css"
+/>
+<!-- News part-->
+<section>
+  <!-- container fluid takes less space; container will take more -->
+  <div class="container-fluid">
+    <h1 class="text_effects text-center text-capitalize pt-5">Trending</h1>
+    <!-- to provide space between up and down -->
+    <hr class="w-25 mx-auto pt-5" />
+    <!-- column 6-6 cz two things are there; image-fluid to make image responsive otherwise to take only 6 grid -->
+    <div class="row mb-5">
+      <div class="col-lg-6 col-md-6 col-12">
+        <div class="bgimg">
+          <div class="centerdiv">
+            <img src="/static/images/asd.jpg" id="profilepic" />
+            <h2 id="loginhead">user login</h2>
+            <form>
+              <div>
+                <input
+                  type="text"
+                  name=""
+                  class="inputbox"
+                  placeholder="Username"
+                />
+              </div>
+              <br />
+              <div>
+                <input
+                  type="Password"
+                  name=""
+                  class="inputbox"
+                  placeholder="Password"
+                />
+              </div>
+              <br />
+              <div>
+                <button type="submit" class="FORGOT-SECTION">LOGIN</button>
+              </div>
+            </form>
+            <br />
+            <div class="FORGOT-SECTION">
+              <h4>
+                <a href="ForgotPassword.html" style="color: red;"
+                  >Forget Password?</a
+                >
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-12">
+        <h1>News</h1>
+        <fieldset style="height: 420px;">
+          <marquee width="60%" direction="up" height="70%" scrollamount="4">
+            Learn German A1 Level in 72 Hours <br />
+            <br />
+            Find out more about our wide range of German courses including our
+            Goethe Exam Preparation course - Your chance for an academic year in
+            Vienna - and our German Teachers' Course for non-native speakers.
+            Travel to Austria and learn German in our language school in
+            Vienna.<br />
+            <br />
+            One Can Learn a Language in 720 hours.
+            <br />
+            <br />
+            21:54 | German is a West Germanic language that is mainly spoken in
+            Central Europe.
+            <br />
+            <br />
+            21:26 | Spanish is one of the six official languages of the United
+            Nations.
+            <br />
+            <br />
+            21:17 | It is also used as an official language by the European
+            Union, the Organization of American States, the Union of South
+            American Nations, the Community of Latin American and Caribbean
+            States, the African Union and many other international
+            organizations.
+            <br /><br />
+            21:12 | Learn Programming Languages
+            <br /><br />
+            21:08 | Any one can learn and grow.
+            <br /><br
+          /></marquee>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- News part end-->

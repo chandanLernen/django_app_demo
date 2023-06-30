@@ -1,0 +1,58 @@
+#colorchange {
+  animation: colorchangethapa 1s infinite;
+}
+
+@keyframes colorchangethapa {
+  0% {
+    color: red;
+  }
+  25% {
+    color: #bf55ec;
+  }
+  50% {
+    color: white;
+  }
+  100% {
+    color: #bf55ec;
+  }
+}
+.bgimg {
+  width: 80%;
+  height: 70vh;
+  background-image: linear-gradient(27deg, #004e95 50%, #013a6b 50%);
+}
+
+.centerdiv {
+  width: 350px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  background-color: red;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(27deg, #013a6b 50%, #004e95 50%);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+
+#profilepic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: relative;
+  top: -60px;
+  left: calc((350px - 120px) / 2);
+}
+
+.FORGOT-SECTION {
+  width: calc(100% - 40px);
+  line-height: 30px;
+  display: block;
+  margin: auto;
+  color: white;
+  background-color: dodgerblue;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  text-align: center;
+  padding-right: 20px;
+  box-sizing: border-box;
+}

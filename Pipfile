@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+pillow = "*"
+django-crispy-forms = "*"
+autopep8 = "*"
+pylint = "*"
+crispy-bootstrap4 = "*"
+boto3 = "*"
+django-storages = "*"
+gunicorn = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

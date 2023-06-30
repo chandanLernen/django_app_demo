@@ -1,0 +1,62 @@
+<section>
+  <div class="container">
+    <h1 class="text_effects text-center text-capitalize pt-5">Apps</h1>
+    <hr class="w-25 mx-auto pt-5" />
+    <!-- till here -->
+    <!-- now adding cards in grid; remember we have to be in a div of class container-fluid and another div inside it must be row ::: class="row text-center mb-5 ; mb is for margin -->
+    <!-- Adding one card 4-4-4 grid -->
+    <div class="row text-center mb-5">
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="/static/images/line4.jpg"
+            alt="Card image"
+          />
+          <div class="card-body">
+            <h4 class="card-title">CRM App</h4>
+            <p class="card-text">You can vote here</p>
+            <a href="{% url 'polls:index' %}" class="btn btn-primary"
+              >Click Here</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- code for cards till here -->
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="/static/images/line4.jpg"
+            alt="Card image"
+          />
+          <div class="card-body">
+            <h4 class="card-title">Posts</h4>
+            <p class="card-text">View Latest Posts.</p>
+            <a href="{% url 'posts:index' %}" class="btn btn-primary"
+              >Click Here</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="/static/images/line4.jpg"
+            alt="Card image"
+          />
+          <div class="card-body">
+            <h4 class="card-title">Todos</h4>
+            <p class="card-text">All your ToDo's.</p>
+            <a href="{% url 'todos:index' %}" class="btn btn-primary"
+              >Click Here</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

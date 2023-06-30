@@ -1,0 +1,54 @@
+{% load static %}
+<link
+  href="{% static '/css/about_us_style.css'  %}"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+<!-- contact us start -->
+<section>
+  <div class="container mb-5">
+    <h1 class="text_effects text-center text-capitalize pt-5">Conatct Us</h1>
+    <hr class="w-25 mx-auto pt-5" />
+    <!-- width 50 is w-50 narrowing the form size; mx-auto is for left and right adjustment -->
+    <div class="w-50 mx-auto">
+      <form action="/action_page.php">
+        <div class="form-group">
+          <label for="email">Your Name</label>
+          <input
+            type="text="
+            class="form-control"
+            id="yourname"
+            autocomplete="off"
+            placeholder="enter ur name"
+          />
+        </div>
+        <!-- 'Yourname' 'Mobile' must be in 'div' and 'class= form-group' and for input must have 'type=' and class=form-control -->
+        <div class="form-group">
+          <label for="pwd">Email:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            autocomplete="off"
+          />
+        </div>
+        <div class="form-group">
+          <label for="pwd">Mobile No.:</label>
+          <input type="number" class="form-control" id="mobile_no" />
+        </div>
+        <div class="form-group">
+          <label> Textarea </label>
+          <textarea class="form-control"></textarea>
+        </div>
+        <div class="form-group form-check">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" /> Remember me
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- contact us end -->

@@ -1,0 +1,101 @@
+# query created by django
+python manage.py sqlmigrate blog 0001
+
+# opening the python shell
+python manage.py shell
+
+# importing model to shell
+from blog.models import Post
+from django.contrib.auth.models import User
+
+# querying to find all Users
+User.objects.all()
+
+# find specific user
+User.objects.first()
+User.objects.last()
+User.objects.filter(username='sita')
+User.objects.filter(username='sita').first()
+
+# storing the result in a variable
+user = User.objects.filter(username='sita').first()
+
+# it helps in accessing the attributes of the user
+user.id
+user.pk
+
+# using get method to pick user
+user = User.objects.get(id=1)
+
+# checking total number of posts
+Post.objects.all()
+
+# Creating Post and assign it to user
+post_1 = Post(title='Blog First', content='My first Blog from Spain', author=user)
+post_2 = Post(title='Blog Second', content='My second Blog from Spain', author_id=user_id)
+
+# must save this to store it in DB
+post_1.save() 
+
+# accessing other attribute of Post
+post = Post.objects.first()
+post.content
+post.author
+post.date_posted
+# accessing extra feature
+post.author.email
+
+# Fetching all the post created by specific user
+user
+user.post_set
+user.post_set.all()
+
+# Creating new post using the same user : 
+user.post_set.create(title='Blog Third', content='My third Blog from Spain')
+# author no need to mention, no need to run save method. Django understand the user and save it DB
+
+
+
+# accesing the user info and its profile
+user.profile
+user.profile.images
+user.profile.images.width
+user.profile.images.url
+
+# exit the shell
+exit()
+
+
+# import data from json file
+import json
+from blog.models import Post
+with open('posts.json') as f:
+    posts_json = json.load(f)
+
+for post in posts_json:
+    post = Post(title=post['title'], content=post['content'], author_id=post['user_id'])
+    post.save() 
+
+
+# pagination query
+from django.core.paginator import Paginator
+posts = ['1','2','3','4','5']
+p = Paginator(posts, 2)
+p.num_pages
+
+for page in p.page_range:
+    print(page)
+
+
+p1 = p.page(1)
+p1
+p1.number
+p1. object_list 
+p1.has_previous()
+p1.has_next()
+p1.next_page_number()
+
+
+# key generation
+import secrets
+secrets.token_hex(24)
